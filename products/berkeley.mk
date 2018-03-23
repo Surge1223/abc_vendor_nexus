@@ -26,4 +26,10 @@ PRODUCT_DEVICE := berkeley
 PRODUCT_BRAND := Huawei
 PRODUCT_MODEL := Honor View 10
 
+# Device Fingerprint
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME=berkeley \
+    BUILD_FINGERPRINT=kirin970/kirin970/kirin970:8.1.0/OPM1.171019.011/jslave01241654:user/test-keys \
+    PRIVATE_BUILD_DESC="kirin970-user 8.1.0 OPM1.171019.011 eng.jslave.20180124.165426 test-keys"
+
 $(call inherit-product-if-exists, vendor/huawei/berkeley/berkeley-vendor.mk)

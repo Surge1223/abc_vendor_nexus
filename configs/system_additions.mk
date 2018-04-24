@@ -15,11 +15,12 @@
 # init.d script support
 PRODUCT_COPY_FILES += \
     vendor/nexus/prebuilt/etc/init.d/00banner:system/etc/init.d/00banner \
-    vendor/nexus/prebuilt/bin/sysinit:system/bin/sysinit
+    vendor/nexus/prebuilt/bin/sysinit:system/bin/sysinit \
 
 # Pure-specific init file
 PRODUCT_COPY_FILES += \
-    vendor/nexus/prebuilt/etc/init.abc.rc:root/init.abc.rc
+    vendor/nexus/prebuilt/etc/init.sexyaf.rc:root/init.sexyaf.rc \
+    vendor/nexus/prebuilt/etc/fstab.taimen:root/init/fstab.taimen
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
@@ -41,45 +42,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Don't compile SystemUITests
 EXCLUDE_SYSTEMUI_TESTS := true
-
-# DU Utils Library
-PRODUCT_BOOT_JARS += \
-   org.dirtyunicorns.utils
-
-# DU Utils Library
-PRODUCT_PACKAGES += \
-   org.dirtyunicorns.utils
-
-# Packages
-PRODUCT_PACKAGES += \
-    GBoardDarkTheme \
-    SystemUIDarkTheme \
-    SettingsDarkTheme \
-    SystemDarkTheme
-
-# Overlays
-PRODUCT_PACKAGES += \
-    AmberAccent \
-    BlackAccent \
-    BlueAccent \
-    BlueGreyAccent \
-    BrownAccent \
-    CyanAccent \
-    DeepOrangeAccent \
-    DeepPurpleAccent \
-    GreenAccent \
-    GreyAccent \
-    IndigoAccent \
-    LightBlueAccent \
-    LightGreenAccent \
-    LimeAccent \
-    OrangeAccent \
-    PinkAccent \
-    PurpleAccent \
-    RedAccent \
-    TealAccent \
-    YellowAccent \
-    WhiteAccent
 
 # Disable Rescue Party
 PRODUCT_PROPERTY_OVERRIDES += \

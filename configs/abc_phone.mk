@@ -14,6 +14,7 @@
 
 include vendor/nexus/configs/aosp_fixes.mk
 include vendor/nexus/configs/bootanimation.mk
+include vendor/nexus/telephony/Android.mk
 include vendor/nexus/configs/abc_main.mk
 include vendor/nexus/configs/system_additions.mk
 include vendor/nexus/configs/version.mk

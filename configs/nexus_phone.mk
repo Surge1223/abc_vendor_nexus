@@ -12,18 +12,22 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Include overlays
-PRODUCT_PACKAGE_OVERLAYS += \
-    vendor/nexus/overlay/common
+include vendor/nexus/configs/aosp_fixes.mk
+include vendor/nexus/configs/bootanimation.mk
+include vendor/nexus/telephony/Android.mk
+include vendor/nexus/configs/nexus_main.mk
+include vendor/nexus/configs/system_additions.mk
+include vendor/nexus/sepolicy/sepolicy.mk
 
-# Main Required Packages
+# Telephony packages
 PRODUCT_PACKAGES += \
-    Launcher3 \
-    LiveWallpapersPicker
+    Stk \
+    CellBroadcastReceiver
 
-# Include explicitly to work around GMS issues
-PRODUCT_PACKAGES += \
-    librsjni
+# Allow tethering without provisioning app
+PRODUCT_PROPERTY_OVERRIDES += \
+    net.tethering.noprovisioning=true
 
-# Inherit prebuilt apps
-$(call inherit-product-if-exists, vendor/gapps/prebuilt.mk)
+# Thank you, please drive thru!
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.dun.override=0

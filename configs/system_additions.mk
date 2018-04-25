@@ -20,32 +20,22 @@ PRODUCT_COPY_FILES += \
 # Pure-specific init file
 PRODUCT_COPY_FILES += \
     vendor/nexus/prebuilt/etc/init.sexyaf.rc:root/init.sexyaf.rc \
-    vendor/nexus/prebuilt/etc/fstab.taimen:root/init/fstab.taimen
+    vendor/nexus/prebuilt/etc/fstab.taimen:root/fstab.taimen
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/nexus/prebuilt/bin/backuptool.sh:install/bin/backuptool.sh \
     vendor/nexus/prebuilt/bin/backuptool.functions:install/bin/backuptool.functions \
     vendor/nexus/prebuilt/bin/50-base.sh:system/addon.d/50-base.sh \
+    vendor/nexus/prebuilt/etc/permissions/privapp-permissions-fixed.xml:system/etc/permissions/privapp-permissions-fixed.xml
 
 # Prebuilt busybox fstrim command
 PRODUCT_COPY_FILES += \
     vendor/nexus/prebuilt/bin/fstrim:system/bin/fstrim
 
-# Security Enhanced Linux
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.selinux=1
-
 # Set Pixel blue light theme on Gboard
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.ime.theme_id=5
-
-# Don't compile SystemUITests
-EXCLUDE_SYSTEMUI_TESTS := true
-
-# Disable Rescue Party
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.disable_rescue=true
 
 # Set custom volume steps
 PRODUCT_PROPERTY_OVERRIDES += \

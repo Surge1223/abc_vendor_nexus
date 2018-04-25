@@ -12,12 +12,23 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-#PureNexus versioning
-ifndef PURE_BUILD_TYPE
-    PURE_BUILD_TYPE := HOMEMADE
-endif
+# Include overlays
+PRODUCT_PACKAGE_OVERLAYS += \
+    vendor/nexus/overlay/common
+
+# Main Required Packages
+PRODUCT_PACKAGES += \
+    Launcher3 \
+    LiveWallpapersPicker
+
+# Include explicitly to work around GMS issues
+PRODUCT_PACKAGES += \
+    librsjni
 
 CUSTOM_VERSION := $(PLATFORM_VERSION)-$(shell date +%m-%d-%Y)
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sexyaf.version=$(CUSTOM_VERSION)
+    ro.nexus.version=$(CUSTOM_VERSION)
+
+# Inherit prebuilt apps
+$(call inherit-product-if-exists, vendor/gapps/prebuilt.mk)

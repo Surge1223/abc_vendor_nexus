@@ -14,7 +14,7 @@
 # limitations under the License.
 
 # Include pure telephony configuration
-include vendor/nexus/configs/abc_phone.mk
+include vendor/nexus/configs/nexus_phone.mk
 
 # Inherit AOSP device configuration for  taimen
 $(call inherit-product, device/google/taimen/aosp_taimen.mk)

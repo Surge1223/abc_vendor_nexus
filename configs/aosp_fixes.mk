@@ -34,9 +34,7 @@ PRODUCT_COPY_FILES += \
     vendor/nexus/prebuilt/lib/libjni_latinime.so:system/lib/libjni_latinime.so \
     vendor/nexus/prebuilt/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so \
     vendor/nexus/prebuilt/lib64/libjni_latinime.so:system/lib64/libjni_latinime.so \
-    vendor/nexus/prebuilt/lib64/libjni_latinimegoogle.so:system/lib64/libjni_latinimegoogle.so \
-    vendor/nexus/prebuilt/media/LMspeed_508.emd:system/vendor/media/LMspeed_508.emd \
-    vendor/nexus/prebuilt/media/PFFprec_600.emd:system/vendor/media/PFFprec_600.emd
+    vendor/nexus/prebuilt/lib64/libjni_latinimegoogle.so:system/lib64/libjni_latinimegoogle.so 
 
 # Clean up packages cache to avoid wrong strings and resources
 PRODUCT_COPY_FILES += \

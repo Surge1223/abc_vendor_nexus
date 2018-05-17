@@ -19,8 +19,7 @@ PRODUCT_COPY_FILES += \
 
 # Pure-specific init file
 PRODUCT_COPY_FILES += \
-    vendor/nexus/prebuilt/etc/init.sexyaf.rc:root/init.sexyaf.rc \
-    vendor/nexus/prebuilt/etc/fstab.taimen:root/fstab.taimen
+    vendor/nexus/prebuilt/etc/init.sexyaf.rc:root/init.sexyaf.rc
 
 # Backup Tool
 PRODUCT_COPY_FILES += \

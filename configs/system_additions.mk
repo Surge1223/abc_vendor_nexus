@@ -25,8 +25,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/nexus/prebuilt/bin/backuptool.sh:install/bin/backuptool.sh \
     vendor/nexus/prebuilt/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/nexus/prebuilt/bin/50-base.sh:system/addon.d/50-base.sh \
-    vendor/nexus/prebuilt/etc/permissions/privapp-permissions-fixed.xml:system/etc/permissions/privapp-permissions-fixed.xml
+    vendor/nexus/prebuilt/bin/50-base.sh:system/addon.d/50-base.sh
 
 # Prebuilt busybox fstrim command
 PRODUCT_COPY_FILES += \

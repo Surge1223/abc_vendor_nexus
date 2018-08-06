@@ -18,8 +18,9 @@ PRODUCT_PACKAGE_OVERLAYS += \
 
 # Main Required Packages
 PRODUCT_PACKAGES += \
-    Launcher3 \
-    LiveWallpapersPicker
+    bbx \
+    minunz \
+    minzip
 
 # Include explicitly to work around GMS issues
 PRODUCT_PACKAGES += \

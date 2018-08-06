@@ -18,6 +18,8 @@ include vendor/nexus/configs/nexus_phone.mk
 # Inherit AOSP device configuration for angler
 $(call inherit-product, device/huawei/angler/aosp_angler.mk)
 
+$(call inherit-product, vendor/gapps/gapps.mk)
+
 # Override AOSP build properties
 PRODUCT_NAME := angler
 PRODUCT_BRAND := google
@@ -28,5 +30,8 @@ PRODUCT_MANUFACTURER := Huawei
 # Device Fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=angler \
-    BUILD_FINGERPRINT=google/angler/angler:8.1.0/OPM3.171019.016/4565142:user/release-keys \
-    PRIVATE_BUILD_DESC="angler-user 8.1.0 OPM3.171019.016 4565142 release-keys"
+    BUILD_FINGERPRINT=google/angler/angler:8.1.0/OPM6.171019.030.B1/4768815:user/release-keys \
+    PRIVATE_BUILD_DESC="angler-user OPM6.171019.030.B1 4768815 release-keys"
+
+$(call inherit-product-if-exists, vendor/huawei/angler/device-vendor.mk)
+

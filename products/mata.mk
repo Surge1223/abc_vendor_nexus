@@ -31,8 +31,8 @@ PRODUCT_MODEL := PH-1
 # Device Fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=mata \
-    BUILD_FINGERPRINT=essential/mata/mata:8.1.0/OPM1.180104.267/399:user/release-keys \
-    PRIVATE_BUILD_DESC="mata-user 8.1.0 OPM1.180104.267 399 release-keys"
+    BUILD_FINGERPRINT=essential/mata/mata:9/PPR1.180610.091/249:user/release-keys \
+    PRIVATE_BUILD_DESC="mata-user 9 PPR1.180610.091 249 release-keys"
 
 $(call inherit-product-if-exists, vendor/essential/mata/mata-vendor.mk)
 

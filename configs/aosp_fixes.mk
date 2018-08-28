@@ -19,21 +19,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
     ro.com.google.clientidbase=android-google \
     ro.error.receiver.system.apps=com.google.android.gms \
-    ro.setupwizard.enterprise_mode=1 \
     ro.com.android.dataroaming=false \
     ro.atrace.core.services=com.google.android.gms,com.google.android.gms.ui,com.google.android.gms.persistent \
+    esim.enable_esim_system_ui_by_default=false \
+    ro.opa.eligible_device=true \
+    setupwizard.feature.baseline_setupwizard_enabled=true \
+    ro.setupwizard.enterprise_mode=1 \
     ro.setupwizard.rotation_locked=true \
-    ro.config.notification_sound=Chime.ogg \
-    ro.config.alarm_alert=Flow.ogg \
-    ro.config.ringtone=Zen.ogg
+    setupwizard.enable_assist_gesture_training=true \
+    ro.setupwizard.esim_cid_ignore=00000001 \
+    setupwizard.theme=glif_v3_light \
     ro.carrier=unknown
-
-# Proprietary latinime libs needed for Keyboard swyping
-PRODUCT_COPY_FILES += \
-    vendor/nexus/prebuilt/lib/libjni_latinime.so:system/lib/libjni_latinime.so \
-    vendor/nexus/prebuilt/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so \
-    vendor/nexus/prebuilt/lib64/libjni_latinime.so:system/lib64/libjni_latinime.so \
-    vendor/nexus/prebuilt/lib64/libjni_latinimegoogle.so:system/lib64/libjni_latinimegoogle.so 
 
 # Clean up packages cache to avoid wrong strings and resources
 PRODUCT_COPY_FILES += \
@@ -51,4 +47,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
 
 # Get some sounds
-$(call inherit-product-if-exists, frameworks/base/data/sounds/GoogleAudio.mk)
+include frameworks/base/data/sounds/pixel/PixelAudio.mk

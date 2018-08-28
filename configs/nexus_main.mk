@@ -18,18 +18,13 @@ PRODUCT_PACKAGE_OVERLAYS += \
 
 # Main Required Packages
 PRODUCT_PACKAGES += \
-    bbx \
-    minunz \
     minzip
 
 # Include explicitly to work around GMS issues
 PRODUCT_PACKAGES += \
     librsjni
 
-CUSTOM_VERSION := $(PLATFORM_VERSION)-$(shell date +%m-%d-%Y)
+CUSTOM_VERSION := $(BUILD_ID)-$(shell date +%m-%d-%Y)
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.nexus.version=$(CUSTOM_VERSION)
-
-# Inherit prebuilt apps
-$(call inherit-product-if-exists, vendor/gapps/prebuilt.mk)

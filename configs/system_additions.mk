@@ -19,7 +19,8 @@ PRODUCT_COPY_FILES += \
 
 # Pure-specific init file
 PRODUCT_COPY_FILES += \
-    vendor/nexus/prebuilt/etc/init.sexyaf.rc:root/init.sexyaf.rc
+    vendor/nexus/prebuilt/etc/init.sexyaf.rc:root/init.sexyaf.rc \
+    vendor/nexus/prebuilt/etc/init.container.rc:root/init.container.rc
 
 # Backup Tool
 PRODUCT_COPY_FILES += \

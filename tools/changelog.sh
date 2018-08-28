@@ -9,7 +9,7 @@ fi
 
 touch $Changelog
 
-echo "Generating changelog..."
+echo "..."
 
 for i in $(seq 10);
 do
